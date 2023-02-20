@@ -8,7 +8,7 @@ class ContatoController extends Controller
 {
     public function principal () {
 
-        var_dump($_POST);
+        // var_dump($_POST);
         return view('site.contato');
     }
 }
