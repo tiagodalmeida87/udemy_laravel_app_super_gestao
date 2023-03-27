@@ -5,6 +5,7 @@ use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\ProdutoDetalheController;
 use App\Http\Middleware\LogAcessoMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,9 @@ Route::middleware('autenticacao')->prefix('/app')->group(function() {
     //produtos
     Route::resource('produto', ProdutoController::class);
     // Route::get('/produto', [ProdutoController::class, 'index'])->name('app.produto');
+
+    //produto detalhes
+    Route::resource('produto-detalhe', ProdutoDetalheController::class);
 
 });
 
